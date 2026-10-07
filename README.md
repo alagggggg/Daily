@@ -1,10 +1,7 @@
-# Nhật ký Times & Timing Android 1.0.0
+# Daily Time Android 1.1.2
 
-- Dùng giao diện từ nhat_ky_v31_6_centered_navigation_icons.html.
-- Icon ứng dụng dùng ảnh người dùng cung cấp.
-- Widget 5x2 gồm 10 ô hoạt động.
-- Mỗi widget lưu danh sách và thứ tự lựa chọn riêng.
-- Hỗ trợ cấu hình lại qua launcher hoặc nhấn ô +.
-- Times: mở ứng dụng và ghi thêm một lần.
-- Timing: mở ứng dụng để bắt đầu hoặc kết thúc; khi chạy hiển thị dấu ■.
-- Đồng bộ toàn bộ hoạt động đang bật, gồm mặc định và tự tạo, theo ngôn ngữ hiện tại.
+- Tên ứng dụng: Daily Time.
+- Timing đang chạy hiển thị đồng hồ thời gian thực, không có ký hiệu hình vuông.
+- Dưới 60 phút: `MM:SS`, ví dụ `08:35`.
+- Từ 60 phút: `H:MM:SS`, ví dụ `1:05:20`.
+- Thời gian bắt đầu Timing được đồng bộ sang widget để tiếp tục đúng sau khi widget dựng lại.
