@@ -54,3 +54,10 @@
 - START/STOP Timing có compare-and-set và chống nhấn đúp 800ms.
 - Native revision là bộ đếm logic, tăng đúng một lần cho command đã áp dụng.
 - Ứng dụng đổi Times/Timing và xóa lịch sử bằng command nguyên tử.
+
+
+## FINAL V1.5.1 Widget Load Hotfix
+- Loại bỏ RemoteViews setBackgroundResource động, nguyên nhân có thể làm launcher báo Sự cố khi tải tiện ích sau khi lưu lựa chọn.
+- Giữ nền ô tĩnh từ XML; trạng thái Timing đang chạy được làm nổi bật bằng tiền tố ▶ và màu chữ đỏ cam.
+- Chronometer ẩn được reset bằng format %s thay vì null để tăng tương thích launcher.
+- Giữ nguyên command-based Native, actionId, expectedState, 20 ô và đồng bộ hai chiều.
