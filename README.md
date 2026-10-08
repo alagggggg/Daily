@@ -1,6 +1,8 @@
-# Daily Time Android 1.2.0
-- Nhấn Times hoặc Timing trên widget xử lý bằng BroadcastReceiver, không mở ứng dụng.
-- Dữ liệu widget lưu vào trạng thái Native đầy đủ và được nạp lại khi mở ứng dụng.
-- Widget 5x2 khi thấp, 5x4 khi kéo cao; cấu hình tối đa lần lượt 10 hoặc 20 hoạt động.
-- Timing hiển thị MM:SS, từ 60 phút hiển thị H:MM:SS, cập nhật định kỳ mà không mở ứng dụng.
-- Mặc định tiếng Việt và mở thẳng giao diện Ghi nhận.
+# Daily Time Android 1.3.0
+
+- Widget cố định 4 hàng × 5 cột, 20 ô.
+- Times và Timing chạy trực tiếp bằng BroadcastReceiver, không mở ứng dụng.
+- Timing cập nhật thời lượng định kỳ 15 giây, MM:SS hoặc H:MM:SS.
+- Dữ liệu thao tác từ widget được lưu vào trạng thái Native đầy đủ và nạp vào Dòng thời gian khi mở ứng dụng.
+- Xuất/nhập Excel .xlsx gồm Activities, Logs, Active, Settings.
+- Sửa xóa toàn bộ lịch sử bằng lưu đồng thời localStorage và Native state.
