@@ -8,6 +8,31 @@
 - Sửa xóa toàn bộ lịch sử bằng lưu đồng thời localStorage và Native state.
 
 
-## V1.3.1
-- Sửa lỗi compile WidgetConfigActivity gọi phương thức data() đã bị loại bỏ.
-- Màn hình cấu hình đọc danh sách hoạt động từ state() và types().
+## V1.3.2
+- Sửa lỗi build WidgetConfigActivity bằng state() và types().
+- Widget chiếm 5 cột × 2 hàng Android, rộng tối thiểu 300dp, cao 110dp.
+- Bên trong luôn có 4 hàng × 5 cột, mỗi hàng khoảng 26dp.
+- Thu gọn font, đệm và khoảng cách để 20 ô tải ổn định trong 110dp.
+- Thêm RemoteViews dự phòng nếu dữ liệu cấu hình không hợp lệ.
+
+
+## V1.3.3
+- Khi Daily Time trở lại foreground, WebView đọc lại Native state trước khi dựng Ghi nhận và Dòng thời gian.
+- Sửa trường hợp thao tác widget khi ứng dụng đang ở nền nhưng giao diện cũ không tự cập nhật khi mở lại.
+- Khi xóa widget, xóa cấu hình selected_appWidgetId tương ứng.
+- Bảo vệ callback chọn file Excel khỏi lỗi null.
+
+
+## V1.3.4
+- Khóa read-modify-write Native state để chống mất bản ghi khi nhấn nhanh hoặc nhấn từ nhiều widget.
+- Revision tăng đơn điệu cho từng thao tác widget.
+- WebView không được ghi đè Native state mới hơn; nếu bị từ chối sẽ nạp lại dữ liệu Native.
+- Nhiều widget tiếp tục dùng cấu hình selected_appWidgetId riêng nhưng dùng chung lịch sử và trạng thái Timing chính thức.
+
+
+## V1.3.5
+- Lưu thời điểm mới theo UTC ISO 8601 có hậu tố Z để Timing không lệch khi đổi múi giờ.
+- Dữ liệu cũ không có múi giờ vẫn được đọc theo múi giờ hệ thống để tương thích.
+- Nhận TIME_SET, TIMEZONE_CHANGED và DATE_CHANGED để dựng lại widget sau đổi giờ hoặc sang ngày mới.
+- BOOT_COMPLETED dựng lại đồng hồ từ StartedAt tuyệt đối và lập lịch cập nhật mới sau khởi động.
+- ID bản ghi widget dùng revision để tránh trùng khi nhấn trong cùng mili giây.
