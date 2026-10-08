@@ -90,3 +90,11 @@
 - Khi command bị MODE_MISMATCH, EXPECTED_STATE_MISMATCH hoặc SESSION_MISMATCH, widget và ứng dụng được refresh lại ngay theo nguồn Native chính thức.
 - actionId, recentActions, chống nhấn đúp 800ms, startedEpoch và revision tiếp tục được giữ để chống phát lại, nhấn nhanh và dừng nhầm phiên Timing.
 - Nền chạy vẫn dùng active overlay khai báo sẵn và setViewVisibility, không dùng setBackgroundResource động.
+
+#### FINAL V1.5.6 Widget Event Picker Fix
+- Sửa lỗi WebView gửi revision bằng Date.now làm compare-and-set luôn từ chối, khiến Native state không nhận danh sách sự kiện và màn hình cấu hình widget trống.
+- WebView giữ nativeRevision logic, gửi đúng revision hiện tại và tăng sau khi sync được chấp nhận.
+- Khi nạp Native state, ứng dụng đồng bộ lại nativeRevision trước mọi lần ghi tiếp theo.
+- Màn hình chọn sự kiện xóa danh sách cũ trước khi dựng lại, tự nạp lại trong onResume và không tạo dòng trùng.
+- Nếu Native state chưa có sự kiện, hiển thị hướng dẫn cùng nút mở Daily Time để khởi tạo đồng bộ, thay vì để màn hình trắng.
+- Giữ nguyên khóa giao dịch chung, compare-and-set, chống mode cũ, timingState cũ, session mismatch và đồng bộ Times/Timing hai chiều.
