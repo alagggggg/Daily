@@ -6,3 +6,8 @@
 - Dữ liệu thao tác từ widget được lưu vào trạng thái Native đầy đủ và nạp vào Dòng thời gian khi mở ứng dụng.
 - Xuất/nhập Excel .xlsx gồm Activities, Logs, Active, Settings.
 - Sửa xóa toàn bộ lịch sử bằng lưu đồng thời localStorage và Native state.
+
+
+## V1.3.1
+- Sửa lỗi compile WidgetConfigActivity gọi phương thức data() đã bị loại bỏ.
+- Màn hình cấu hình đọc danh sách hoạt động từ state() và types().
