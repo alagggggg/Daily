@@ -61,3 +61,12 @@
 - Giữ nền ô tĩnh từ XML; trạng thái Timing đang chạy được làm nổi bật bằng tiền tố ▶ và màu chữ đỏ cam.
 - Chronometer ẩn được reset bằng format %s thay vì null để tăng tương thích launcher.
 - Giữ nguyên command-based Native, actionId, expectedState, 20 ô và đồng bộ hai chiều.
+
+
+## FINAL V1.5.2 Widget Text Wrap
+- Tên hoạt động tối đa hai dòng, không dùng dấu ba chấm.
+- Tên một dòng được căn giữa theo chiều dọc bên cạnh Emoji.
+- Emoji tăng lên 17sp trong vùng rộng 22dp, tương đương chiều cao khối tên hai dòng.
+- Dấu ▶ nằm riêng ngay bên trái Chronometer chạy từng giây.
+- Tăng độ tương phản nền widget, nền ô, Emoji, tên và thời gian.
+- Không dùng setBackgroundResource động, giữ tương thích launcher của V1.5.1.
