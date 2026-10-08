@@ -68,3 +68,9 @@
 - Khi tên chỉ có 1 dòng, nội dung vẫn được căn giữa theo chiều dọc.
 - Tiền tố ▶ chuyển sang ngay bên trái đồng hồ Chronometer chạy từng giây.
 - Tăng tương phản màu: thời gian đỏ nâu #8E3B2F, Emoji đỏ cam #E14B2F, tên đỏ đậm #7A2335.
+
+### V1.5.3 Timing Active Contrast
+- Đồng hồ Timing đang chạy hiển thị trong nhãn nền cam nhạt, viền đỏ cam và chữ đỏ đậm.
+- Tiền tố ▶ vẫn nằm ngay bên trái thời gian chạy từng giây.
+- Emoji và tên của ô đang chạy có màu nổi bật hơn; ô chưa chạy dùng màu dịu hơn.
+- Chỉ dùng thay đổi màu chữ và View hiển thị/ẩn, không khôi phục đổi nền RemoteViews động từng gây lỗi tải widget.
