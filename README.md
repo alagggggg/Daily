@@ -105,3 +105,10 @@
 - targetCellHeight=3 cho Android 12 trở lên.
 - minHeight và minResizeHeight đặt 180dp theo công thức launcher cũ 70 x 3 - 30 để widget thực sự chiếm 3 hàng thay vì vẫn bị xếp vào 2 hàng.
 - Giữ resizeMode=horizontal để không thay đổi hành vi resize dọc và giữ nguyên toàn bộ logic đồng bộ.
+
+
+###### FINAL V1.5.9 Widget Height 1.5x
+- Tăng chiều cao yêu cầu của widget từ 180dp lên 270dp, đúng tỷ lệ 1.5 lần.
+- Giữ targetCellHeight=3 để launcher Android 12 trở lên ưu tiên bố trí widget cao 3 hàng.
+- minResizeHeight cũng tăng lên 270dp để tránh launcher thu widget trở lại 2 hàng.
+- Giữ nguyên bố cục 6 hàng x 5 cột, tối đa 30 sự kiện và toàn bộ logic đồng bộ.
