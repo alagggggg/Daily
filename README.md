@@ -36,3 +36,21 @@
 - Nhận TIME_SET, TIMEZONE_CHANGED và DATE_CHANGED để dựng lại widget sau đổi giờ hoặc sang ngày mới.
 - BOOT_COMPLETED dựng lại đồng hồ từ StartedAt tuyệt đối và lập lịch cập nhật mới sau khởi động.
 - ID bản ghi widget dùng revision để tránh trùng khi nhấn trong cùng mili giây.
+
+
+## V1.4.0
+- Ô widget bố cục ngang: icon trái, tên và thời gian bên phải.
+- Timing dùng Chronometer chạy từng giây; không còn cập nhật theo bước 15 giây.
+- Ô Timing đang chạy dùng nền và viền riêng để nổi bật.
+- Chuyển Times sang Timing hoặc Timing sang Times trong ứng dụng được đồng bộ ngay sang mọi widget.
+- Nếu chuyển Timing đang chạy sang Times, active cũ được xóa để không treo đồng hồ.
+- Thao tác Times và Timing từ mọi widget vẫn ghi vào Native state và nạp lại vào ứng dụng.
+
+
+## FINAL V1.5.0
+- NativeCommandProcessor là cổng ghi chính thức cho ADD_TIMES, START_TIMING, STOP_TIMING, UPDATE_ACTIVITY, CLEAR_HISTORY và IMPORT_STATE.
+- Widget gửi expected mode, expected timing state và startedEpoch thay vì toggle mù.
+- actionId được tạo riêng cho từng lần nhận thao tác; recentActions chống phát lại.
+- START/STOP Timing có compare-and-set và chống nhấn đúp 800ms.
+- Native revision là bộ đếm logic, tăng đúng một lần cho command đã áp dụng.
+- Ứng dụng đổi Times/Timing và xóa lịch sử bằng command nguyên tử.
