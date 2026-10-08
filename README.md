@@ -62,11 +62,9 @@
 - Chronometer ẩn được reset bằng format %s thay vì null để tăng tương thích launcher.
 - Giữ nguyên command-based Native, actionId, expectedState, 20 ô và đồng bộ hai chiều.
 
-
-## FINAL V1.5.2 Widget Text Wrap
-- Tên hoạt động tối đa hai dòng, không dùng dấu ba chấm.
-- Tên một dòng được căn giữa theo chiều dọc bên cạnh Emoji.
-- Emoji tăng lên 17sp trong vùng rộng 22dp, tương đương chiều cao khối tên hai dòng.
-- Dấu ▶ nằm riêng ngay bên trái Chronometer chạy từng giây.
-- Tăng độ tương phản nền widget, nền ô, Emoji, tên và thời gian.
-- Không dùng setBackgroundResource động, giữ tương thích launcher của V1.5.1.
+### V1.5.2 Widget Readability
+- Tên hoạt động hiển thị tối đa 2 dòng, không dùng dấu ba chấm.
+- Emoji tăng từ 12sp lên 17sp và vùng hiển thị tăng lên 22dp.
+- Khi tên chỉ có 1 dòng, nội dung vẫn được căn giữa theo chiều dọc.
+- Tiền tố ▶ chuyển sang ngay bên trái đồng hồ Chronometer chạy từng giây.
+- Tăng tương phản màu: thời gian đỏ nâu #8E3B2F, Emoji đỏ cam #E14B2F, tên đỏ đậm #7A2335.
