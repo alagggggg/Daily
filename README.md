@@ -100,8 +100,8 @@
 - Giữ nguyên khóa giao dịch chung, compare-and-set, chống mode cũ, timingState cũ, session mismatch và đồng bộ Times/Timing hai chiều.
 
 
-##### FINAL V1.5.7 Widget 6x5
-- Tăng widget từ 4 hàng x 5 cột lên 6 hàng x 5 cột, tổng cộng 30 ô.
-- Tăng chiều cao widget từ 110dp lên 165dp và targetCellHeight từ 2 lên 3 để giữ kích thước mỗi hàng tương đương bản cũ.
-- Màn hình chọn sự kiện hỗ trợ tối đa 30 hoạt động.
-- Giữ nguyên xử lý Times, Timing, đồng bộ Native/WebView và toàn bộ giao diện khác.
+##### FINAL V1.5.8 Launcher 3 Rows Fix
+- Widget nội dung 6 hàng x 5 cột, tối đa 30 sự kiện.
+- targetCellHeight=3 cho Android 12 trở lên.
+- minHeight và minResizeHeight đặt 180dp theo công thức launcher cũ 70 x 3 - 30 để widget thực sự chiếm 3 hàng thay vì vẫn bị xếp vào 2 hàng.
+- Giữ resizeMode=horizontal để không thay đổi hành vi resize dọc và giữ nguyên toàn bộ logic đồng bộ.
