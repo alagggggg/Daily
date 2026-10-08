@@ -98,3 +98,10 @@
 - Màn hình chọn sự kiện xóa danh sách cũ trước khi dựng lại, tự nạp lại trong onResume và không tạo dòng trùng.
 - Nếu Native state chưa có sự kiện, hiển thị hướng dẫn cùng nút mở Daily Time để khởi tạo đồng bộ, thay vì để màn hình trắng.
 - Giữ nguyên khóa giao dịch chung, compare-and-set, chống mode cũ, timingState cũ, session mismatch và đồng bộ Times/Timing hai chiều.
+
+
+##### FINAL V1.5.7 Widget 6x5
+- Tăng widget từ 4 hàng x 5 cột lên 6 hàng x 5 cột, tổng cộng 30 ô.
+- Tăng chiều cao widget từ 110dp lên 165dp và targetCellHeight từ 2 lên 3 để giữ kích thước mỗi hàng tương đương bản cũ.
+- Màn hình chọn sự kiện hỗ trợ tối đa 30 hoạt động.
+- Giữ nguyên xử lý Times, Timing, đồng bộ Native/WebView và toàn bộ giao diện khác.
