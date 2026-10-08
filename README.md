@@ -74,3 +74,19 @@
 - Tiền tố ▶ vẫn nằm ngay bên trái thời gian chạy từng giây.
 - Emoji và tên của ô đang chạy có màu nổi bật hơn; ô chưa chạy dùng màu dịu hơn.
 - Chỉ dùng thay đổi màu chữ và View hiển thị/ẩn, không khôi phục đổi nền RemoteViews động từng gây lỗi tải widget.
+
+#### V1.5.4 Active Cell Background and Bidirectional Mode Sync
+- Ô Timing đang chạy dùng lớp nền cam đào và viền đỏ cam được khai báo sẵn trong XML.
+- Chỉ bật/tắt lớp nền bằng setViewVisibility; không dùng setBackgroundResource động.
+- Mỗi lần đổi Times/Timing trong ứng dụng đều đi qua UPDATE_ACTIVITY, cập nhật Native state và dựng lại tất cả widget.
+- Khi chuyển Timing đang chạy sang Times, trạng thái active được xóa theo chính sách DISCARD_AND_STOP để đồng hồ và nền chạy không bị treo.
+- Thao tác Times/Timing từ widget cập nhật Native state rồi phát STATE_CHANGED để WebView đang mở nạp lại ngay.
+- Widget luôn dựng PendingIntent mới theo mode và revision hiện tại, tránh thao tác theo chế độ cũ sau khi chuyển đổi.
+
+#### FINAL V1.5.5 Conflict Guard Complete
+- Dùng chung một STATE_LOCK cho lệnh từ widget, lệnh từ ứng dụng và đồng bộ toàn bộ state, loại bỏ cửa sổ race giữa hai khóa khác nhau.
+- syncState dùng compare-and-set nghiêm ngặt: chỉ nhận state có revision đúng bằng Native revision hiện tại; state cũ hoặc vượt revision bị từ chối và ứng dụng tự nạp lại Native state.
+- Widget kiểm tra mode và timingState đã render trước khi START/STOP; thao tác từ PendingIntent cũ không thể áp dụng sai sau khi hoạt động đổi Times/Timing hoặc đổi trạng thái ở widget khác.
+- Khi command bị MODE_MISMATCH, EXPECTED_STATE_MISMATCH hoặc SESSION_MISMATCH, widget và ứng dụng được refresh lại ngay theo nguồn Native chính thức.
+- actionId, recentActions, chống nhấn đúp 800ms, startedEpoch và revision tiếp tục được giữ để chống phát lại, nhấn nhanh và dừng nhầm phiên Timing.
+- Nền chạy vẫn dùng active overlay khai báo sẵn và setViewVisibility, không dùng setBackgroundResource động.
